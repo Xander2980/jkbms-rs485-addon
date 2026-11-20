@@ -1,3 +1,7 @@
+## 4.4.1 (fork Xander2980) — 2026-11-20
+
+- BMS settings: limits of 4.4.0 were too tight for real packs (Home Assistant logged `Invalid value for number.…_max_charge_current: 200 (range 0.0 - 150.0)`). Max charge / discharge current is now 0–600 A and the balance trigger voltage 0.003–1 V, in Home Assistant and in the write nodes alike.
+
 ## 4.4.0 (fork Xander2980) — 2026-11-20
 
 ### Security
