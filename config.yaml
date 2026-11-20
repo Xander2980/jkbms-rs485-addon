@@ -1,6 +1,6 @@
 ---
 name: "JK-BMS wired management (fork Xander2980)"
-version: 4.3.2
+version: 4.4.0
 slug: "smartphoton_jkbms"
 description: JK-BMS Management via RS485 & CAN bus or TCP/IP Gateway
 url: https://github.com/Xander2980/jkbms-rs485-addon
@@ -14,25 +14,18 @@ arch:
   - amd64
 privileged:
   - NET_ADMIN
-  - SYS_RAWIO
 ports:
   "1891/tcp": 1891
 ports_description:
   "1891/tcp": Web interface
 hassio_api: true
-hassio_role: manager
 homeassistant_api: true
 host_network: true
-auth_api: true
 uart: true
 map:
   - type: homeassistant_config
     read_only: false
     path: /config
-  - type: media
-    read_only: false
-  - type: share
-    read_only: false
 
 options:
   # JK-BMS Configuration
@@ -73,6 +66,10 @@ schema:
   mqttadresse_port: str?
   mqttuser: str?
   mqttpass: password?
+
+  # Login of the Node-RED editor / built-in dashboard (user "pi").
+  # Empty = a password is generated once and shown in the add-on log.
+  editor_password: password?
 
   dashboard_language: list(de|en|fr)
   create_dashboard: bool

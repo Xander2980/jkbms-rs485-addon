@@ -1,3 +1,15 @@
+## 4.4.0 (fork Xander2980) — 2026-11-20
+
+### Security
+- **Breaking:** the Node-RED editor and the built-in dashboard (port 1891) no longer use the shared upstream password. Set the new option `editor_password`, or use the password that is generated once per installation and printed in the add-on log (user `pi`).
+- Fewer add-on permissions: removed `SYS_RAWIO`, `hassio_role: manager`, `auth_api` and the `media` / `share` folder mappings (none of them is used).
+
+### Fixed
+- BMS settings: a value rejected by the validation is no longer forwarded to the RS485 bus; it is dropped with a warning in the log (32 write nodes).
+- BMS settings: the limits offered in Home Assistant now match the limits of the write nodes in both modes (polling and broadcast), so Home Assistant no longer offers values the add-on refuses.
+- BMS settings: range checks added for the temperature protections and the charge OCP delay / recovery time, which only checked the data type.
+- Availability: the add-on publishes `Offline` to `JK-BMS-RS485-CAN-module` when it stops or loses the MQTT connection (last will) and `Online` on every reconnect; live values, settings and alarms use that topic as `availability_topic` and become "unavailable" instead of keeping the last value.
+
 ## 4.3.2 (fork Xander2980) — 2026-11-18
 
 - `Send_bip`: correct description (it is an anonymous usage ping to smartphoton.ch, not a beep) and default off.

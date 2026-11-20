@@ -47,6 +47,10 @@ configuration:
     name: "🚩 MQTT → Password"
     description: "Password associated with the MQTT user."
 
+  editor_password:
+    name: "🔐 Node-RED → Editor password"
+    description: "Password for the Node-RED editor and the built-in dashboard on port 1891 (user: pi). Leave empty to use a password generated once per installation; it is shown in the add-on log at start."
+
   Send_bip:
     name: "📊 Add-on usage"
     description: "Sends an anonymous usage ping to the server of the original project (smartphoton.ch) at start and daily at 15:00: only a code for the system type (HAOS/Docker/Linux/Windows). Not a sound. Not needed for the add-on to work."

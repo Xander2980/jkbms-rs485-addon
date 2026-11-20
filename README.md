@@ -123,6 +123,7 @@ Entity ids follow `sensor.bms_<id>_bms_<key>`, e.g. `sensor.bms_1_bms_cell_7_vol
 Durations are `duration` sensors in seconds. The display names follow `dashboard_language`.
 
 Built-in Node-RED dashboard (live, device info, settings): `http://<home-assistant>:1891/dashboard`.
+Login: user `pi`, password from the add-on option `editor_password`. If the option is empty, a password is generated once per installation and printed in the add-on log at start.
 
 ---
 

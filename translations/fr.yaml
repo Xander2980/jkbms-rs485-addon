@@ -46,6 +46,10 @@ configuration:
     name: "🚩 MQTT → Mot de passe"
     description: "Mot de passe associé à l'utilisateur MQTT."
 
+  editor_password:
+    name: "🔐 Node-RED → Mot de passe de l'éditeur"
+    description: "Mot de passe de l'éditeur Node-RED et du tableau de bord intégré sur le port 1891 (utilisateur : pi). Laisser vide pour utiliser un mot de passe généré une fois par installation ; il est affiché dans le journal de l'add-on au démarrage."
+
   Send_bip:
     name: "📊 Utilisation de l'Add-on"
     description: "Envoie au démarrage et chaque jour à 15 h un signal d'utilisation anonyme au serveur du projet d'origine (smartphoton.ch) : uniquement un code du type de système (HAOS/Docker/Linux/Windows). Pas de son. Inutile au fonctionnement de l'add-on."
